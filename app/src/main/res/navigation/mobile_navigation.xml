@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_tickets">
+
+    <fragment
+        android:id="@+id/navigation_tickets"
+        android:name="com.example.tenretni.ui.tickets.list.TicketsFragment"
+        android:label="@string/title_tickets"
+        tools:layout="@layout/fragment_tickets" >
+        <action
+            android:id="@+id/action_navigation_tickets_to_detailTicketFragment"
+            app:destination="@id/detailTicketFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_gateways"
+        android:name="com.example.tenretni.ui.gateways.GatewaysFragment"
+        android:label="@string/title_gateways"
+        tools:layout="@layout/fragment_gateways" >
+        <action
+            android:id="@+id/action_navigation_gateways_to_detailGatewayFragment"
+            app:destination="@id/detailGatewayFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_network"
+        android:name="com.example.tenretni.ui.notifications.NetworksFragment"
+        android:label="@string/title_network"
+        tools:layout="@layout/fragment_networks" />
+    <fragment
+        android:id="@+id/detailTicketFragment"
+        android:name="com.example.tenretni.ui.tickets.detail.DetailTicketFragment"
+        android:label="fragment_detail_ticket"
+        tools:layout="@layout/fragment_detail_ticket" >
+        <argument
+            android:name="href"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_detailTicketFragment_to_mapsActivity"
+            app:destination="@id/mapsActivity" />
+        <action
+            android:id="@+id/action_detailTicketFragment_to_detailGatewayFragment"
+            app:destination="@id/detailGatewayFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/mapsActivity"
+        android:name="com.example.tenretni.ui.maps.MapsActivity"
+        android:label="Map"
+        tools:layout="@layout/activity_maps">
+        <argument
+            android:name="position"
+            app:argType="com.google.android.gms.maps.model.LatLng" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </activity>
+    <fragment
+        android:id="@+id/detailGatewayFragment"
+        android:name="com.example.tenretni.ui.detailsGateway.DetailGatewayFragment"
+        android:label="fragment_detail_gateway"
+        tools:layout="@layout/fragment_detail_gateway" >
+        <argument
+            android:name="href"
+            app:argType="string" />
+    </fragment>
+</navigation>

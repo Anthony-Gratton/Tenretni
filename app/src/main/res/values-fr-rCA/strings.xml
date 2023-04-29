@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tenretni</string>
+
+    <string name="title_tickets">Billets</string>
+    <string name="title_gateways">Bornes</string>
+    <string name="title_network">Réseau</string>
+    <string name="title_activity_loading">Terentni</string>
+
+    <string name="loadingFormat">Chargement %d/%d …</string>
+    <string name="ticketNumber">Billet %s</string>
+    <string name="apiErrorMessage">Erreur lors du chargement des données du serveur.</string>
+
+    <string name="txtPriorityLow">Bas</string>
+    <string name="txtPriorityNormal">Normal</string>
+    <string name="txtPriorityHigh">Haut</string>
+    <string name="txtPriorityCritical">Critique</string>
+
+    <string name="txtStateOpen">Ouvert</string>
+    <string name="txtStateSolve">Fermé</string>
+    <string name="install">Installer</string>
+    <string name="solve">Résoudre</string>
+    <string name="open">Ouvrir</string>
+
+    <string name="txtGatewayStateOnline">En Ligne</string>
+    <string name="txtGatewayStateOffline">Hors Ligne</string>
+    <string name="canceled_installation">Installation Annulée</string>
+    <string name="cam_permission_missing">Permission Caméra manquante</string>
+    <string name="txtPing">%d ns</string>
+    <string name="txtSpeed">%.2f Ebps</string>
+    <string name="txtSignal">%d dBm</string>
+    <string name="update">Mettre à jour</string>
+    <string name="reboot">Redémarrer</string>
+    <string name="gatewayId">Borne %s</string>
+    <string name="txtUpdateNetwork">Dernière mise à jour: %s</string>
+    <string name="txtNextRebootNetwork">"Prochain redémarrage: %s"</string>
+</resources>
